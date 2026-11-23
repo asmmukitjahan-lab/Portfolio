@@ -47,7 +47,7 @@ const skills = [
 
 const EducationSkill = () => {
   return (
-    <div className="card-3d relative border border-b-0 border-[#2a2a2c] py-5 sm:py-6 md:border-b md:border-r lg:border-b lg:border-r xl:border-b">
+    <div className="relative border border-b-0 border-[#2a2a2c] py-5 sm:py-6 md:border-b md:border-r lg:border-b lg:border-r xl:border-b">
       {/* ───────────── LEFT: EDUCATION & SKILLS ───────────── */}
       <h2 className="px-4 text-[20px] font-bold uppercase leading-[26px] tracking-[-0.01em] sm:text-[22px]">
         Education &amp; Skills
@@ -96,7 +96,7 @@ const EducationSkill = () => {
         {skills.map((skill) => (
           <span
             key={skill}
-            className="min-h-8 px-2 py-1.5 flex items-center justify-center text-center rounded-md border border-[#4a4a4d] bg-black text-[9.5px] font-medium uppercase leading-3 tracking-[0.02em] text-white sm:text-[10.5px]"
+            className="min-h-8 card-3d px-2 py-1.5 flex items-center justify-center text-center rounded-md border border-[#4a4a4d] bg-black text-[9.5px] font-medium uppercase leading-3 tracking-[0.02em] text-white sm:text-[10.5px]"
           >
             {skill}
           </span>

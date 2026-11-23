@@ -88,7 +88,7 @@ const Navbar = () => {
 
               {/* Right: availability */}
               <a
-                href="/contact"
+                href="#contact"
                 className="navbar-availability flex items-center gap-1 text-[12px] font-normal uppercase tracking-tight text-white/90"
               >
                 <span>Available for freelance</span>

@@ -1,3 +1,4 @@
+import Container from "../Component/Container";
 import SectionHeading from "../Component/SectionHeading";
 import ServiceCard from "../Component/ServiceCard";
 
@@ -44,7 +45,7 @@ const MyService = () => {
   return (
     <>
       <section className="section-enter py-25 bground font-['Inter']">
-        <div className="container">
+        <Container>
           <SectionHeading
             Heading={"my services"}
             subheading={"Designing clean scalable responsive website"}
@@ -61,7 +62,7 @@ const MyService = () => {
               <ServiceCard {...item} />
             ))}
           </div>
-        </div>
+        </Container>
       </section>
       {/* Divider */}
       <div className=" h-[1px] w-full bg-gradient-to-r from-white/10 via-red-900 to-white/10" />

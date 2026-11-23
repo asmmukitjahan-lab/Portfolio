@@ -203,7 +203,7 @@ const Banner = ({ name = ["MUKIT", "JAHAN"] }) => {
             </p>
 
             <a
-              href="/about"
+              href="#about"
               className="absolute bottom-[1%] left-[3%] flex items-center gap-[6px] no-underline"
             >
               <span className="grid h-[25px] w-[25px] place-items-center rounded-full bg-[#ff1a2b]">

@@ -29,58 +29,70 @@ h3,
   --font-signature: "Mrs Saint Delafield", cursive;
 }
 .bground {
-	background: radial-gradient(100% 100% at 50% 50%, rgba(214,0,20,.55) 0%, rgba(120,0,10,.25) 55%, rgba(0,0,0,0) 100%);
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    rgba(214, 0, 20, 0.55) 0%,
+    rgba(120, 0, 10, 0.25) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
-.iconbg{
-	position: relative;
-	overflow: hidden;
-	background: radial-gradient(120% 80% at 20% 10%, #a70a15 0%, #b80915 45%, #8c0610 100%);
+.iconbg {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+    120% 80% at 20% 10%,
+    #a70a15 0%,
+    #b80915 45%,
+    #8c0610 100%
+  );
 }
 
 .card-3d {
   transform-style: preserve-3d;
   transition:
-    transform 350ms cubic-bezier(.2,.7,.2,1),
+    transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1),
     border-color 250ms ease,
     box-shadow 350ms ease;
 }
 
 .card-3d:hover {
-  transform: perspective(900px) translateY(-8px) rotateX(2deg);
+  transform: perspective(900px) translateY(-4px) rotateX(2deg);
   box-shadow:
-    0 18px 35px rgba(0, 0, 0, .35),
-    0 10px 28px rgba(225, 6, 19, .10);
+    0 18px 35px rgba(0, 0, 0, 0.35),
+    0 8px 20px rgba(225, 6, 21, 0.53);
 }
 
 .depth-panel {
   isolation: isolate;
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, .08),
-    0 16px 40px rgba(0, 0, 0, .28);
+    inset 0 1px rgba(255, 255, 255, 0.08),
+    0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
 .banner-depth {
-  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, .28));
+  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, 0.28));
 }
 
 .navbar-3d {
   position: relative;
   z-index: 40;
   box-shadow:
-    inset 0 -1px rgba(255, 255, 255, .06),
-    0 10px 24px rgba(0, 0, 0, .22),
-    0 3px 10px rgba(225, 6, 19, .04);
+    inset 0 -1px rgba(255, 255, 255, 0.06),
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    0 3px 10px rgba(225, 6, 19, 0.04);
   backdrop-filter: blur(14px);
 }
 
 .navbar-logo {
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, .42));
-  transition: transform 250ms ease, filter 250ms ease;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.42));
+  transition:
+    transform 250ms ease,
+    filter 250ms ease;
 }
 
 .navbar-logo:hover {
   transform: perspective(500px) translateZ(8px) rotateX(-3deg);
-  filter: drop-shadow(0 8px 10px rgba(225, 6, 19, .18));
+  filter: drop-shadow(0 8px 10px rgba(225, 6, 19, 0.18));
 }
 
 .navbar-link {
@@ -114,7 +126,7 @@ h3,
     transparent 250deg 360deg
   );
   opacity: 0;
-  transform: scale(.92);
+  transform: scale(0.92);
   pointer-events: none;
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -122,7 +134,9 @@ h3,
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   padding: 1.5px;
-  transition: opacity 180ms ease, transform 220ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease;
 }
 
 .navbar-link:hover::before,
@@ -132,7 +146,7 @@ h3,
   opacity: 1;
   transform: scale(1);
   animation: navbar-red-run 1.8s linear infinite;
-  filter: drop-shadow(0 0 5px rgba(255, 26, 43, .75));
+  filter: drop-shadow(0 0 5px rgba(255, 26, 43, 0.75));
 }
 
 @keyframes navbar-red-run {
@@ -144,10 +158,10 @@ h3,
 .navbar-link:hover,
 .navbar-link:focus-visible {
   color: #fff;
-  background: rgba(255, 255, 255, .055);
+  background: rgba(255, 255, 255, 0.055);
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, .08),
-    0 7px 14px rgba(0, 0, 0, .22);
+    inset 0 1px rgba(255, 255, 255, 0.08),
+    0 7px 14px rgba(0, 0, 0, 0.22);
   transform: perspective(500px) translateY(-2px) translateZ(6px);
   outline: none;
 }
@@ -157,18 +171,24 @@ h3,
   isolation: isolate;
   min-height: 36px;
   padding: 0 10px;
-  border: 1px solid rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, .08),
-    0 8px 16px rgba(0, 0, 0, .24);
-  transition: transform 220ms ease, border-color 220ms ease;
+    inset 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.24);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease;
 }
 
 .navbar-availability:hover {
   transform: perspective(500px) translateY(-2px) translateZ(5px);
-  border-color: rgba(225, 6, 19, .55);
+  border-color: rgba(225, 6, 19, 0.55);
 }
 
 .project-3d {
@@ -178,7 +198,7 @@ h3,
 
 .project-3d .swiper-slide {
   transition:
-    transform 500ms cubic-bezier(.2,.7,.2,1),
+    transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
     opacity 350ms ease,
     filter 350ms ease;
 }
@@ -188,8 +208,8 @@ h3,
 }
 
 .project-3d .swiper-slide:not(.swiper-slide-active) {
-  filter: brightness(.82);
-  transform: scale(.96);
+  filter: brightness(0.82);
+  transform: scale(0.96);
 }
 
 .floating-3d {
@@ -198,7 +218,8 @@ h3,
 }
 
 @keyframes floating-depth {
-  0%, 100% {
+  0%,
+  100% {
     transform: perspective(900px) translateY(0) rotateX(0);
   }
   50% {
@@ -207,7 +228,7 @@ h3,
 }
 
 .section-enter {
-  animation: section-rise 700ms cubic-bezier(.2,.7,.2,1) both;
+  animation: section-rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 @keyframes section-rise {
@@ -225,17 +246,19 @@ h3,
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  border: 1px solid rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
   background:
-    radial-gradient(circle at 78% 18%, rgba(225, 6, 19, .30), transparent 34%),
+    radial-gradient(circle at 78% 18%, rgba(225, 6, 19, 0.3), transparent 34%),
     linear-gradient(135deg, #171719 0%, #0b0b0c 58%, #130809 100%);
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, .10),
-    0 28px 70px rgba(0, 0, 0, .48),
-    0 12px 32px rgba(225, 6, 19, .08);
+    inset 0 1px rgba(255, 255, 255, 0.1),
+    0 28px 70px rgba(0, 0, 0, 0.48),
+    0 12px 32px rgba(225, 6, 19, 0.08);
   transform-style: preserve-3d;
-  transition: transform 400ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms ease;
+  transition:
+    transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 400ms ease;
 }
 
 .footer-surface::before {
@@ -246,19 +269,19 @@ h3,
   height: 420px;
   right: -250px;
   top: -260px;
-  border: 1px solid rgba(255, 26, 43, .22);
+  border: 1px solid rgba(255, 26, 43, 0.22);
   border-radius: 50%;
   box-shadow:
-    0 0 0 35px rgba(255, 26, 43, .025),
-    0 0 0 70px rgba(255, 26, 43, .018);
+    0 0 0 35px rgba(255, 26, 43, 0.025),
+    0 0 0 70px rgba(255, 26, 43, 0.018);
 }
 
 .footer-surface:hover {
-  transform: perspective(1200px) translateY(-5px) rotateX(.5deg);
+  transform: perspective(1200px) translateY(-5px) rotateX(0.5deg);
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, .12),
-    0 32px 78px rgba(0, 0, 0, .52),
-    0 16px 36px rgba(225, 6, 19, .13);
+    inset 0 1px rgba(255, 255, 255, 0.12),
+    0 32px 78px rgba(0, 0, 0, 0.52),
+    0 16px 36px rgba(225, 6, 19, 0.13);
 }
 
 .footer-contact-row {
@@ -271,8 +294,8 @@ h3,
 
 .footer-contact-row:hover {
   transform: translateX(5px);
-  background: rgba(255, 255, 255, .035);
-  border-color: rgba(255, 26, 43, .45) !important;
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 26, 43, 0.45) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

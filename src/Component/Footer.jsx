@@ -136,7 +136,7 @@ const Footer = ({ fadeEdges = false }) => {
               {Icons.map((item) => (
                 <li
                   key={item.href}
-                  className="footer-contact-row flex h-9 w-9 overflow-hidden items-center justify-center rounded-full border border-white/15 bg-white/[0.04] hover:border-[#ff1a2b]"
+                  className="footer-contact-row flex h-9 w-9 overflow-hidden items-center justify-center rounded-full border border-white/15 bg-white/[0.04] hover:border-[#ff1a2b]/70"
                 >
                   <a
                     href={item.href}
