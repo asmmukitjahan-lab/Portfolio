@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 570px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1320px;
+  --color-primary: #8750f7;
+  --color-secondary: #140c1c;
+}
+
+body {
+  @apply bg-[#080808];
+}
+
+@utility container {
+  @apply mx-auto;
+}
+@theme {
+  --font-signature: "Mrs Saint Delafield", cursive;
+}
+.bground {
+	background: radial-gradient(100% 100% at 50% 50%, rgba(214,0,20,.55) 0%, rgba(120,0,10,.25) 55%, rgba(0,0,0,0) 100%);
+}
+.iconbg{
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(120% 80% at 20% 10%, #a70a15 0%, #b80915 45%, #8c0610 100%);
+}
