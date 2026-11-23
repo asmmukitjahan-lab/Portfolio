@@ -15,14 +15,14 @@ const ArrowLong = ({ className = "" }) => (
 
 const SectionHeading = ({className, Heading, subheading}) => {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
       {/* Header */}
       <h2 className={`whitespace-nowrap text-white text-[24px] font-bold uppercase leading-none tracking-wide ${className}`}>
         {Heading}
         <br />
       </h2>
 
-      <span className="h-px flex-1 bg-white/40" />
+      <span className="hidden h-px flex-1 bg-white/40 sm:block" />
 
       <a
         href="#"

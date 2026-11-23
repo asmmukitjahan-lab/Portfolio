@@ -96,14 +96,14 @@ function ImageLoop() {
       <section>
         <div
           className="bg-black py-5 flex items-center"
-          style={{ height: "150px", position: "relative", overflow: "hidden" }}
+          style={{ height: "110px", position: "relative", overflow: "hidden" }}
         >
           <LogoLoop
             logos={techLogos}
             speed={70}
             direction="left"
-            logoHeight={60}
-            gap={60}
+            logoHeight={48}
+            gap={36}
             hoverSpeed={0}
             scaleOnHover
             fadeOut

@@ -11,15 +11,15 @@ import Workprocess from "../Section/Workprocess";
 const About = () => {
   return (
     <>
-      <section className="bg-black font-['Inter',sans-serif] text-white py-25">
+      <section className="section-enter bg-black font-['Inter',sans-serif] text-white py-12 sm:py-16 lg:py-25">
         <Container>
-          <div className="pb-20 grid grid-cols-[500px_500px_300px] overflow-hidden">
+          <div className="pb-12 grid grid-cols-1 overflow-hidden md:grid-cols-2 xl:grid-cols-[500px_500px_300px] lg:pb-20">
             <EducationSkill />
             <Workprocess />
 
             {/* ───────────── RIGHT: QUOTE PANEL ───────────── */}
             <aside
-              className="relative overflow-hidden"
+              className="depth-panel relative min-h-[380px] overflow-hidden md:col-span-2 xl:col-span-1 xl:min-h-0"
               style={{
                 background:
                   "radial-gradient(120% 80% at 20% 10%, #d4101c 0%, #b80915 45%, #8c0610 100%)",

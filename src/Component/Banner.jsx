@@ -53,9 +53,57 @@ const STATS = [
 const Banner = ({ name = ["MUKIT", "JAHAN"] }) => {
   return (
     <>
-      <section className="w-full bg-black text-white select-none pt-5 pb-25">
+      <section className="w-full bg-black text-white select-none pt-5 pb-12 sm:pb-16 lg:pb-25">
         <Container>
-          <div className="relative w-full aspect-[941/645]  overflow-hidden">
+          <div className="section-enter sm:hidden">
+            <p className="font-signature text-3xl text-white">Hello, I&apos;m</p>
+            <h1 className="mt-2 text-5xl font-black leading-[0.9] text-[#f5001b]">
+              MUKIT
+              <br />
+              JAHAN
+            </h1>
+            <div className="relative mt-2 min-h-[390px] overflow-hidden">
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(55% 55% at 50% 35%, rgba(214,0,20,.55) 0%, rgba(120,0,10,.25) 55%, rgba(0,0,0,0) 100%)",
+                }}
+              />
+              <img
+                src={image}
+                alt="Mukit Jahan"
+                draggable={false}
+                className="absolute bottom-0 left-1/2 h-[92%] w-[78%] -translate-x-1/2 object-cover object-top"
+              />
+            </div>
+            <h2 className="mt-5 text-xl font-semibold tracking-wide text-[#ff1a2b]">
+              FRONTEND WEB DEVELOPER
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-white/90">
+              I bring brands to life with clean, modern web experiences, creative visuals,
+              and user-focused interfaces that connect brands with people.
+            </p>
+            <a
+              href="/about"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-white"
+            >
+              <span className="grid size-8 place-items-center rounded-full bg-[#ff1a2b]">
+                <span className="ml-0.5 block size-0 border-y-[5px] border-l-[8px] border-y-transparent border-l-white" />
+              </span>
+              ABOUT ME
+            </a>
+            <ul className="mt-8 grid grid-cols-2 rounded-xl border border-white/10">
+              {STATS.map((s) => (
+                <li key={s.value} className="p-4 text-center even:border-l even:border-white/10">
+                  <strong className="block text-3xl text-[#ff1a2b]">{s.value}</strong>
+                  <span className="mt-1 block text-xs text-white">{s.label.join(" ")}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="section-enter relative hidden w-full aspect-[941/645] overflow-hidden sm:block">
             {/* top hairline */}
             {/* <div className="absolute inset-x-0 top-0 h-full w-full z-50 bg-[rgba(0,0,0,0.29)]" /> */}
             <style>{FONT_CSS}</style>
@@ -109,7 +157,7 @@ const Banner = ({ name = ["MUKIT", "JAHAN"] }) => {
               src={image}
               alt="bannerimg"
               draggable={false}
-              className="absolute bottom-0 left-[32.5%] top-[11%] h-[89%] w-[49%] drop-shadow-[-50px_-50px_-50px_rgba(255,0,30,0.15)] object-cover object-top overflow-hidden"
+              className="banner-depth absolute bottom-0 left-[32.5%] top-[11%] h-[89%] w-[49%] object-cover object-top overflow-hidden"
             />
 
             {/* shadow fades so text stays readable */}

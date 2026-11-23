@@ -77,12 +77,12 @@ const ArrowLong = ({ className = "" }) => (
 
 const ProjectCard = ({ id, title, subtitle, image, bg }) => (
   <div
-    class="relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300
+    className="card-3d relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300
   before:absolute before:inset-0 before:rounded-2xl
   before:bg-gradient-to-r before:from-white/10 before:via-red-900 before:to-white/10
   before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100"
   >
-    <div class="relative z-10 rounded-2xl bg-black h-[400px] overflow-hidden">
+    <div className="relative z-10 rounded-2xl bg-black h-[400px] overflow-hidden">
       <a href="#" className="group block">
         {/* Thumbnail */}
         <div className={`aspect-[16/10] w-full overflow-hidden ${bg}`}>
@@ -119,7 +119,7 @@ const ProjectCard = ({ id, title, subtitle, image, bg }) => (
 const Projects = () => {
   return (
     <>
-      <section className="w-full bg-black py-25 font-['Inter'] text-white">
+      <section className="section-enter w-full bg-black py-25 font-['Inter'] text-white">
         <Container>
           <SectionHeading
             Heading={"SELECTED PROJECTS"}
@@ -131,10 +131,15 @@ const Projects = () => {
               <ProjectCard key={project.id} {...project} />
             ))} */}
           {/* </div> */}
-          <div className="py-20">
+          <div className="project-3d py-20">
             <Swiper
-              spaceBetween={30}
-              slidesPerView={3}
+              spaceBetween={16}
+              slidesPerView={1}
+              breakpoints={{
+                570: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 24 },
+                1020: { slidesPerView: 3, spaceBetween: 30 },
+              }}
               loop={true}
               autoplay={{
                 delay: 2500,

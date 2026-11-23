@@ -68,21 +68,21 @@ const steps = [
 
 const Workprocess = () => {
   return (
-    <div className="relative border-t border-b border-r border-[#2a2a2c] pl-9 py-6">
+    <div className="relative border border-[#2a2a2c] px-4 py-6 sm:pl-9 md:border-l-0 xl:pl-9">
       {/* ───────────── MIDDLE: WORK PROCESS ───────────── */}
-      <h2 className="text-[22px] pl-7 font-bold uppercase leading-[28px] tracking-[-0.01em]">
+      <h2 className="text-[22px] pl-0 sm:pl-7 font-bold uppercase leading-[28px] tracking-[-0.01em]">
         Work Process
       </h2>
 
-      <div className="mt-[7px]">
+      <div className="mt-5 grid gap-4 md:mt-[7px] xl:block">
         {steps.map((s, i) => (
           <div
             key={s.n}
-            className={`relative ${i === steps.length - 1 ? "h-[38px]" : "h-[60px]"}`}
+            className={`relative flex min-h-[58px] items-center gap-3 xl:block ${i === steps.length - 1 ? "xl:h-[38px]" : "xl:h-[60px]"}`}
           >
             {/* number */}
             <span
-              className="absolute left-[30px] top-[15px] text-[20px] font-bold leading-6 tracking-[-0.06em]"
+              className="shrink-0 w-8 text-[20px] font-bold leading-6 tracking-[-0.06em] xl:absolute xl:left-[30px] xl:top-[15px]"
               style={{ color: RED }}
             >
               {s.n}
@@ -90,12 +90,12 @@ const Workprocess = () => {
 
             {/* connector */}
             {i !== steps.length - 1 && (
-              <span className="absolute left-[98px] top-[48px] h-[22px] w-px bg-[#6d6d70]" />
+              <span className="hidden xl:absolute xl:block xl:left-[98px] xl:top-[48px] xl:h-[22px] xl:w-px xl:bg-[#6d6d70]" />
             )}
 
             {/* circle + icon */}
             <span
-              className="absolute left-[80px] top-[10px] flex h-[38px] w-[38px] items-center justify-center rounded-full border bg-[#0b0b0c]"
+              className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full border bg-[#0b0b0c] xl:absolute xl:left-[80px] xl:top-[10px]"
               style={{ borderColor: RED }}
             >
               <svg
@@ -113,7 +113,7 @@ const Workprocess = () => {
             </span>
 
             {/* text */}
-            <div className="absolute left-[150px] top-[16px] whitespace-nowrap">
+            <div className="min-w-0 xl:absolute xl:left-[150px] xl:top-[16px]">
               <p
                 className="text-[14px] font-bold leading-[18px] tracking-[0.01em]"
                 style={{ color: RED }}

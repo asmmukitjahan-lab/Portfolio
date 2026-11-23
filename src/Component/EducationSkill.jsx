@@ -25,47 +25,36 @@ const education = [
   },
 ];
 
-// [label, width in px] — grouped by row to match the layout exactly
-const skillRows = [
-  [
-    ["HTML", 73],
-    ["CSS", 76],
-    ["FIGMA", 67],
-    ["React", 68],
-    ["Next.js", 68],
-  ],
-  [
-    ["Tailwind CSS", 73],
-    ["Bootstrap  CSS", 68],
-    ["Vite", 77],
-    ["GitHub", 77],
-  ],
-  [
-    ["Modern UI", 76],
-    ["Motion", 77],
-    ["User Flow", 77],
-  ],
-  [
-    ["Testing", 50],
-    ["Accessibility", 73],
-    ["Optimization", 91],
-  ],
-  [
-    ["Responsive Layouts", 67],
-    ["Component-Based Architecture", 77],
-  ],
+const skills = [
+  "HTML",
+  "CSS",
+  "Figma",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Vite",
+  "GitHub",
+  "Modern UI",
+  "Motion",
+  "User Flow",
+  "Testing",
+  "Accessibility",
+  "Optimization",
+  "Responsive Layout",
+  "Component Architecture",
 ];
 
 const EducationSkill = () => {
   return (
-    <div className="relative border-t border-b border-r border-[#2a2a2c] py-6">
+    <div className="card-3d relative border border-b-0 border-[#2a2a2c] py-5 sm:py-6 md:border-b md:border-r lg:border-b lg:border-r xl:border-b">
       {/* ───────────── LEFT: EDUCATION & SKILLS ───────────── */}
-      <h2 className="pl-4 text-[22px] font-bold uppercase leading-[28px] tracking-[-0.01em]">
+      <h2 className="px-4 text-[20px] font-bold uppercase leading-[26px] tracking-[-0.01em] sm:text-[22px]">
         Education &amp; Skills
       </h2>
 
       <h3
-        className="pl-4 mt-[22px] text-[20px] font-bold uppercase leading-5 tracking-[0.01em]"
+        className="mt-5 px-4 text-[18px] font-bold uppercase leading-5 tracking-[0.01em] sm:mt-[22px] sm:text-[20px]"
         style={{ color: RED }}
       >
         Education
@@ -75,17 +64,17 @@ const EducationSkill = () => {
         {education.map((e, i) => (
           <div
             key={e.title}
-            className={`flex items-start justify-between ${i === 0 ? "mt-[11px]" : "mt-[14px]"}`}
+            className={`flex flex-col gap-1 border-b border-white/[0.05] pb-3 last:border-b-0 sm:flex-row sm:items-start sm:justify-between ${i === 0 ? "mt-3" : "mt-3"}`}
           >
             <div>
-              <p className="text-[16px] font-semibold leading-[18px]">
+              <p className="text-[14px] font-semibold leading-5 sm:text-[15px] sm:leading-[18px]">
                 {e.title}
               </p>
-              <p className="text-[12px] leading-4 text-[#b9b9bb]">{e.Major}</p>
-              <p className="text-[12px] leading-4 text-[#b9b9bb]">{e.place}</p>
+              {e.Major && <p className="text-[11px] leading-4 text-[#b9b9bb] sm:text-[12px]">{e.Major}</p>}
+              <p className="text-[11px] leading-4 text-[#b9b9bb] sm:text-[12px]">{e.place}</p>
             </div>
             <span
-              className="mt-[1px] text-[12px] leading-[18px]"
+              className="mt-1 shrink-0 text-[11px] leading-[18px] sm:mt-[1px] sm:ml-3 sm:text-[12px]"
               style={{ color: RED }}
             >
               {e.year}
@@ -97,25 +86,20 @@ const EducationSkill = () => {
       <div className="mt-[18px] h-px w-full bg-[#3a2326]" />
 
       <h3
-        className="pl-5 mt-[13px] text-[20px] font-bold uppercase leading-5 tracking-[0.01em]"
+        className="mt-4 px-4 text-[18px] font-bold uppercase leading-5 tracking-[0.01em] sm:mt-[13px] sm:text-[20px]"
         style={{ color: RED }}
       >
         Skills
       </h3>
 
-      <div className="pl-4 mt-[10px] pr-4 flex flex-col gap-[10px]">
-        {skillRows.map((row, r) => (
-          <div key={r} className="flex justify-between gap-1">
-            {row.map(([label, w], i) => (
-              <span
-                key={`${label}-${i}`}
-                style={{ width: w }}
-                className="py-1 flex-1 items-center justify-center text-center whitespace-nowrap rounded-[5px] border border-[#4a4a4d] bg-black text-[11px] font-medium uppercase tracking-[0.02em] text-white/100"
-              >
-                {label}
-              </span>
-            ))}
-          </div>
+      <div className="mt-3 grid grid-cols-2 gap-2 px-4 sm:grid-cols-3 sm:gap-2.5 xl:grid-cols-3">
+        {skills.map((skill) => (
+          <span
+            key={skill}
+            className="min-h-8 px-2 py-1.5 flex items-center justify-center text-center rounded-md border border-[#4a4a4d] bg-black text-[9.5px] font-medium uppercase leading-3 tracking-[0.02em] text-white sm:text-[10.5px]"
+          >
+            {skill}
+          </span>
         ))}
       </div>
     </div>

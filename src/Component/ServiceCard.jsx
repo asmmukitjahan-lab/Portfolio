@@ -2,7 +2,7 @@ import icon from "../assets/service-icon (1).png";
 
 const ServiceCard = ({ img, title, description, listArray = [] }) => {
   return (
-    <div className="p-7.5 bg-black rounded-2xl border border-transparent hover:border-gray-600 transition-all duration-300 hover:shadow-[0_0_200px_rgba(500,0,0,0.15)] transition-all duration-300">
+    <div className="card-3d depth-panel p-7.5 bg-black rounded-2xl border border-transparent hover:border-[#e10613]/50">
       <div className="iconbg size-[64px] bg-repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 1px, transparent 1px 3px), repeating-linear-gradient(-45deg, rgba(0,0,0,.12) 0 1px, transparent 1px 3px) rounded-full p-1 flex items-center justify-center">
         <img src={img || icon} alt="icon" />
       </div>

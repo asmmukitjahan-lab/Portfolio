@@ -43,13 +43,13 @@ const serviceData = [
 const MyService = () => {
   return (
     <>
-      <section className="py-25 bground font-['Inter']">
+      <section className="section-enter py-25 bground font-['Inter']">
         <div className="container">
           <SectionHeading
             Heading={"my services"}
             subheading={"Designing clean scalable responsive website"}
           />
-          <div className="grid grid-cols-4 gap-7 pt-15 pb-20">
+          <div className="grid grid-cols-1 gap-5 pt-10 pb-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7 lg:pt-15 lg:pb-20">
             {serviceData.map((item) => (
               //   <ServiceCard
               //     img={item.img}

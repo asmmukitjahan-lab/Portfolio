@@ -12,7 +12,7 @@ import laptop from "../assets/Laptop.png";
  *  - /laptop.png in your public folder (the laptop + mug photo, included)
  */
 
-const RED = "#e8182b";
+const RED = "#ff1a2b";
 
 const Sparkle = ({ className = "" }) => (
   <svg viewBox="0 0 24 24" className={className} fill={RED} aria-hidden="true">
@@ -108,12 +108,12 @@ const ALL_EDGES_MASK =
 
 const Footer = ({ fadeEdges = false }) => {
   return (
-    <footer className=" py-25 bg-black font-['Inter',ui-sans-serif,system-ui,sans-serif] text-white">
+    <footer className="py-12 sm:py-16 lg:py-25 bg-black text-white">
       <Container>
-        <div className="relative overflow-hidden flex flex-col-[1fr_1fr_2fr] items-center md:h-[274px] md:flex-row">
+        <div className="footer-surface relative flex flex-col items-stretch lg:h-[300px] lg:flex-row">
           {/* ───────── Left: heading, copy, availability ───────── */}
-          <div className="relative shrink-0 px-[30px] pb-8 pt-[27px] md:w-[300px] md:pb-0">
-            <h2 className="text-[28px] font-bold uppercase leading-[35px] tracking-[-0.01em]">
+          <div className="relative z-10 shrink-0 w-full px-5 pb-8 pt-8 sm:px-8 lg:w-[300px] lg:pb-0 lg:pt-9">
+            <h2 className="text-[30px] font-bold uppercase leading-[36px] tracking-[-0.02em]">
               Let’s work
               <br />
               together
@@ -122,7 +122,7 @@ const Footer = ({ fadeEdges = false }) => {
             {/* sparkle between the two heading lines */}
             <Sparkle className="absolute left-[204px] top-[51px] h-[22px] w-[22px]" />
 
-            <p className="mt-3 whitespace-nowrap text-[12.5px] leading-4 text-white/90">
+            <p className="mt-4 text-[13px] leading-5 text-white/70">
               I’m currently open for new projects and
               <br />
               collaborations. Whether you need a
@@ -136,7 +136,7 @@ const Footer = ({ fadeEdges = false }) => {
               {Icons.map((item) => (
                 <li
                   key={item.href}
-                  className="flex h-8 w-8 overflow-hidden items-center justify-center rounded-full border-[1.5px] border-[#e8182b] hover:border-[#ffffff]/70 hover:border-[1.5px]"
+                  className="footer-contact-row flex h-9 w-9 overflow-hidden items-center justify-center rounded-full border border-white/15 bg-white/[0.04] hover:border-[#ff1a2b]"
                 >
                   <a
                     href={item.href}
@@ -152,7 +152,7 @@ const Footer = ({ fadeEdges = false }) => {
           </div>
 
           {/* ───────── Middle: contact rows ───────── */}
-          <ul className="shrink-0 px-[30px] pb-8 md:w-[220px] md:p-0 md:pt-[27px]">
+          <ul className="relative z-10 shrink-0 w-full px-5 pb-8 sm:px-8 lg:w-[245px] lg:px-2 lg:py-9">
             {contacts.map(({ icon, label, href }, i) => {
               const last = i === contacts.length - 1;
               const content = (
@@ -172,7 +172,7 @@ const Footer = ({ fadeEdges = false }) => {
               return (
                 <li
                   key={label}
-                  className={`flex h-[60px] items-center md:w-[220px] ${
+                  className={`footer-contact-row flex h-[56px] items-center px-2 md:w-[220px] ${
                     last ? "" : "border-b"
                   }`}
                   style={last ? undefined : { borderColor: RED }}
@@ -195,11 +195,11 @@ const Footer = ({ fadeEdges = false }) => {
           {/* ───────── Right: laptop + mug photo ───────── */}
           {/* On md+ the photo is pinned to the footer's right/top/bottom edges,
             so it always fills the full footer height with no gaps. */}
-          <div className="relative h-full overflow-hidden md:absolute md:inset-y-0 md:left-[500px]  md:right-0 md:h-auto">
+          <div className="floating-3d relative h-[220px] w-full overflow-hidden sm:h-[260px] lg:absolute lg:inset-y-0 lg:left-[545px] lg:right-0 lg:h-auto">
             <img
               src={laptop}
               alt="Laptop displaying code next to a black mug"
-              className=" bg-transparent h-full w-full object-cover "
+              className="h-full w-full object-cover object-center"
               style={{
                 WebkitMaskImage: fadeEdges ? ALL_EDGES_MASK : LEFT_FADE_MASK,
                 maskImage: fadeEdges ? ALL_EDGES_MASK : LEFT_FADE_MASK,
