@@ -4,7 +4,7 @@ import brand_3 from "../assets/Tailwind.png";
 import brand_4 from "../assets/Bootstrap.png";
 import brand_5 from "../assets/React.png";
 import brand_6 from "../assets/next.png";
-import brand_7 from "../assets/Vite.png";
+import brand_7 from "../assets/vite.png";
 import brand_8 from "../assets/Figma.png";
 import brand_9 from "../assets/github.png";
 import brand_10 from "../assets/vercel.png";
