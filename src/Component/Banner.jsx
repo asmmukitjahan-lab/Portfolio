@@ -142,10 +142,10 @@ const Banner = ({ name = ["MUKIT", "JAHAN"] }) => {
               </defs>
 
               <FitText
-                x={22.5}
-                y={490}
-                cap={480}
-                width={900}
+                x={20}
+                y={480}
+                cap={430}
+                width={901}
                 fill="url(#pb-red)"
               >
                 PORTFOLIO
@@ -157,7 +157,7 @@ const Banner = ({ name = ["MUKIT", "JAHAN"] }) => {
               src={image}
               alt="bannerimg"
               draggable={false}
-              className="banner-depth absolute bottom-0 left-[32.5%] top-[11%] h-[89%] w-[49%] object-cover object-top overflow-hidden"
+              className="banner-depth absolute bottom-0 left-[32.5%] top-[11%] z-[5] h-[89%] w-[49%] object-cover object-top overflow-hidden"
             />
 
             {/* shadow fades so text stays readable */}
