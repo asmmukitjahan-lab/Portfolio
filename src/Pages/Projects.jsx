@@ -19,7 +19,8 @@ import gerold from "../assets/Gerold.png";
 import doctorcare from "../assets/Doctorcare.png";
 import nasscrop from "../assets/NassCrop.png";
 import coffeeshop from "../assets/Coffeeshop.png";
-import azure from "../assets/azurefashion.png"
+import azure from "../assets/azurefashion.png";
+import property from "../assets/pj_property.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -37,6 +38,14 @@ const projects = [
   },
   {
     id: "02",
+    title: "Property Business Website",
+    subtitle:
+      "Elegant property website UI for the UK market with a clean Buy/Rent property search flow, rich visuals and an elegant, fully responsive design.",
+    image: property,
+    href: "https://propertybusiness-chi.vercel.app/",
+  },
+  {
+    id: "03",
     title: "Portfolio Website",
     subtitle:
       "A modern personal portfolio built to highlight services, projects, resume details, and professional branding through a clean, responsive interface.",
@@ -44,7 +53,7 @@ const projects = [
     href: "https://gerold-project-sigma.vercel.app/",
   },
   {
-    id: "03",
+    id: "04",
     title: "DoctorCare",
     subtitle:
       "A modern website with a polished visual style and responsive layout.",
@@ -52,7 +61,7 @@ const projects = [
     href: "https://doctor-care-ashy.vercel.app/",
   },
   {
-    id: "04",
+    id: "05",
     title: "NASSCROP",
     subtitle:
       "A polished web project showcasing clear structure, modern visuals, and a professional presentation for the brand.",
@@ -60,7 +69,7 @@ const projects = [
     href: "https://nasscrop.vercel.app/",
   },
   {
-    id: "05",
+    id: "06",
     title: "Coffee Website",
     subtitle:
       "A warm and inviting landing page with a clean layout, strong visual hierarchy, and engaging product presentation.",
@@ -91,12 +100,12 @@ const ProjectCard = ({ id, title, subtitle, image, href }) => (
     <div className="relative h-full p-3">
       {/* Thumbnail */}
       <div className="relative h-[260px] overflow-hidden rounded-[16px]">
-          <img
-            src={image}
-            alt={`${title} — ${subtitle}`}
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
-            loading="lazy"
-          />
+        <img
+          src={image}
+          alt={`${title} — ${subtitle}`}
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-white/[0.03]" />
 
         {/* <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 backdrop-blur-md">
@@ -117,16 +126,16 @@ const ProjectCard = ({ id, title, subtitle, image, href }) => (
       {/* Meta row */}
       <div className="flex items-start gap-4 px-3 pb-3 pt-5">
         <span className="font-['Oswald'] w-10 shrink-0 text-[38px] font-semibold leading-none tracking-[-0.04em] text-[#e4112b]">
-            {id}
-          </span>
+          {id}
+        </span>
 
         <div className="min-w-0 flex-1">
           <h3 className="font-['Inter'] truncate text-[18px] font-bold uppercase leading-tight tracking-[0.04em] text-white transition-colors duration-300 group-hover:text-[#ff3445]">
-              {title}
-            </h3>
+            {title}
+          </h3>
           <p className="mt-2 line-clamp-2 text-[12px] leading-[1.55] text-white/45">
-              {subtitle}
-            </p>
+            {subtitle}
+          </p>
         </div>
       </div>
     </div>
@@ -176,8 +185,8 @@ const Projects = () => {
           </div>
         </Container>
       </section>
-        {/* Divider */}
-        <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-red-900 to-white/10" />
+      {/* Divider */}
+      <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-red-900 to-white/10" />
     </>
   );
 };
